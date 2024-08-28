@@ -15,9 +15,16 @@ const Home = () => {
       <section className="flex size-full flex-col gap-5 text-white">
         <div className="h-[303px] w-full rounded-[20px] bg-hero bg-cover">
           <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
-            <h2 className="glassmorphism2 max-w-[273px] rounded py-2 text-center text-base font-normal">
-              Upcoming Meeting at: 12:30 PM
-            </h2>
+            <h1 class="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r gap-2 to-emerald-600 from-sky-400">
+                JROOM
+              </span>
+              <span className="px-2">Better way to meet.</span>
+            </h1>
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+              Still in development.
+            </p>
+
             <div className="flex flex-col py-1 gap-25">
               <h1 className="text-4xl font-extrabold lg:text-7xl">{time}</h1>
               <p className="text-lg font-medium text-sky-1 lg:text-2xl">
