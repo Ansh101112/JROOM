@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
-import { callbygetid } from "@/hooks/Callbygetid";
+import { Callbygetid } from "@/hooks/Callbygetid";
 import { useUser } from "@clerk/nextjs";
 import { useStreamVideoClient } from "@stream-io/video-react-sdk";
 import { useRouter } from "next/navigation";
@@ -29,7 +29,7 @@ const PersonalRoom = () => {
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingID}?personal=true`;
 
-  const { call } = callbygetid(meetingID);
+  const { call } = Callbygetid(meetingID);
 
   const startRoom = async () => {
     if (!client || !user) {

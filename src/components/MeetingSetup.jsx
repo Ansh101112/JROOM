@@ -6,6 +6,7 @@ import {
 } from "@stream-io/video-react-sdk";
 import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
+import { useCall } from "@stream-io/video-react-sdk";
 
 const MeetingSetup = ({ setisSetupComplete }) => {
   const [isMicCamToggledON, setisMicCamToggledON] = useState(false);
