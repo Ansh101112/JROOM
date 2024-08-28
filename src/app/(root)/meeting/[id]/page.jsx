@@ -3,13 +3,13 @@
 import Loader from "@/components/Loader";
 import MeetingRoom from "@/components/MeetingRoom";
 import MeetingSetup from "@/components/MeetingSetup";
-import { Callbygetid } from "@/hooks/Callbygetid";
+import { useCallByGetId } from "@/hooks/useCallByGetId";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
 import React, { useState } from "react";
 
 const Meeting = ({ id }) => {
   const [isSetupComplete, setisSetupComplete] = useState(false);
-  const { call } = Callbygetid(id);
+  const { call } = useCallByGetId(id);
 
   if (!call) return <Loader></Loader>;
 
