@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const Previous = () => {
   return (
-    <div>Previous</div>
-  )
-}
+    <div
+      style={{
+        textAlign: "center",
+        padding: "20px",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <h1>🚧 In Development 🚧</h1>
+      <p>This feature will be available soon. Stay tuned!</p>
+    </div>
+  );
+};
 
-export default Previous
+export default Previous;

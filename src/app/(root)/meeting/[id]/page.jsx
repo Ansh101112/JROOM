@@ -1,11 +1,33 @@
-import React from 'react'
+"use client";
 
-const Meeting = ({ params }) => {
+import Loader from "@/components/Loader";
+import MeetingRoom from "@/components/MeetingRoom";
+import MeetingSetup from "@/components/MeetingSetup";
+import { callbygetid } from "@/hooks/callbygetid";
+import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+import React, { useState } from "react";
+
+const Meeting = ({ id }) => {
+  const [isSetupComplete, setisSetupComplete] = useState(false);
+  const { call } = callbygetid(id);
+
+  if (!call) return <Loader></Loader>;
+
   return (
     <>
-    <h1>meeting #{params.id}</h1>
+      <main className="h-screen w-full">
+        <StreamCall call={call}>
+          <StreamTheme>
+            {!isSetupComplete ? (
+              <MeetingSetup setisSetupComplete={setisSetupComplete} />
+            ) : (
+              <MeetingRoom />
+            )}
+          </StreamTheme>
+        </StreamCall>
+      </main>
     </>
-  )
-}
+  );
+};
 
-export default Meeting
+export default Meeting;

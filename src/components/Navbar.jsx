@@ -10,19 +10,18 @@ const Navbar = () => {
       <nav className="flex-between fixed z-50 w-full bg-blue-950 px-6 py-4 lg:px-10">
         <Link href="/" className="flex items-center gap-1">
           <Image
-            src="/icons/logo.svg"
-            width={32}
-            height={32}
+            src="/icons/logo3.png"
+            width={42}
+            height={42}
             alt="JMEET_LOGO"
-            className="max-sm:size-10"
-          ></Image>
-          <p className="text-[25px] font-extrabold">JMEET</p>
+            className="max-sm:size-10 p-1"
+          />
+          <p className="text-[25px] font-extrabold">JROOM</p>
         </Link>
         <div className="flex justify-between items-center gap-5">
           <MobileNav />
-
           <SignedIn>
-            <UserButton className="ml-auto" />
+            <UserButton className="hover:bg-blue-700" />
           </SignedIn>
         </div>
       </nav>
