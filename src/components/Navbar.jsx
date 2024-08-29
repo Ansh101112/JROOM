@@ -16,7 +16,7 @@ const Navbar = () => {
             alt="JMEET_LOGO"
             className="max-sm:size-10 p-1"
           />
-          <p className="text-[25px] font-extrabold">JROOM</p>
+          <p className="text-[25px] font-extrabold">JMEET</p>
         </Link>
         <div className="flex justify-between items-center gap-5">
           <MobileNav />
