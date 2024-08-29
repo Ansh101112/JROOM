@@ -17,7 +17,7 @@ const Home = () => {
           <div className="flex h-full flex-col justify-between max-md:px-5 max-md:py-8 lg:p-11">
             <h1 class="mb-4 text-xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-4xl">
               <span class="text-transparent bg-clip-text bg-gradient-to-r gap-2 to-emerald-600 from-sky-400">
-                JROOM
+                JMEET
               </span>
               <span className="px-2">Better way to meet.</span>
             </h1>
